@@ -1,0 +1,27 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color:#172033; background:#f3f5f8; }
+* { box-sizing:border-box; }
+body { margin:0; }
+.container { max-width:1040px; margin:48px auto; padding:0 22px 48px; }
+.eyebrow { color:#5369a6; font-size:12px; font-weight:800; letter-spacing:.14em; }
+h1 { font-size:clamp(30px,5vw,44px); letter-spacing:-.04em; margin:10px 0; }
+h2 { font-size:20px; margin:0; }
+.lead { color:#647087; font-size:17px; margin:0 0 28px; }
+.panel { background:#fff; border:1px solid #e3e7ef; border-radius:16px; padding:24px; margin:18px 0; box-shadow:0 8px 30px #17203308; }
+.panel-head { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.hint { color:#647087; font-size:14px; }
+textarea { width:100%; min-height:260px; resize:vertical; padding:16px; border:1px solid #d7dce6; border-radius:10px; background:#fbfcfe; color:#202b40; font:13px/1.6 ui-monospace, SFMono-Regular, monospace; }
+button { border:0; border-radius:9px; padding:11px 16px; background:#3457c5; color:white; font-weight:700; cursor:pointer; }
+button:disabled { opacity:.45; cursor:not-allowed; }
+button.secondary { background:#edf1fa; color:#34466f; }
+.actions { display:flex; align-items:center; gap:12px; margin-top:14px; flex-wrap:wrap; }
+.actions.compact { margin:0; }
+#status { color:#647087; font-size:13px; }
+.empty { color:#8a93a4; padding:30px 0; }
+.result { display:grid; gap:18px; }
+.result h3 { font-size:15px; margin:0 0 8px; color:#34466f; }
+.result p { line-height:1.65; margin:0; white-space:pre-wrap; }
+.result ul { margin:8px 0 0; padding-left:20px; line-height:1.7; }
+.metric { color:#7a8496; font-size:12px; margin-top:6px; }
+.notice { background:#fff8e8; border:1px solid #f0dfb5; padding:12px 14px; border-radius:9px; color:#72551a; font-size:13px; }
+footer { color:#8992a2; font-size:12px; text-align:center; margin-top:28px; }
+@media(max-width:650px) { .container{margin:24px auto}.panel{padding:18px}.panel-head{align-items:flex-start; flex-direction:column}.actions.compact{flex-direction:column;align-items:stretch} }

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-помощник товарных описаний</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main class="container">
+  <header>
+    <div class="eyebrow">B2B CONTENT WORKFLOW</div>
+    <h1>AI-помощник товарных описаний</h1>
+    <p class="lead">Черновик карточки контрольно-измерительного прибора из исходных технических данных.</p>
+  </header>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Исходные данные</h2>
+      <button class="secondary" id="example">Загрузить пример</button>
+    </div>
+    <p class="hint">Вставьте JSON. Обязательное поле — <code>name</code>. Технические характеристики передавайте в объекте <code>specs</code>.</p>
+    <textarea id="payload" spellcheck="false">{
+  "name": "Манометр показывающий DM 02",
+  "manufacturer": "Манотомь",
+  "specs": {
+    "диапазон измерений": "0–1,6 МПа",
+    "класс точности": "1,5",
+    "присоединение": "G1/2",
+    "диаметр корпуса": "100 мм"
+  },
+  "description": "Прибор предназначен для измерения избыточного давления."
+}</textarea>
+    <div class="actions">
+      <button id="generate">Сформировать карточку</button>
+      <span id="status" role="status"></span>
+    </div>
+  </section>
+
+  <section class="panel result-panel">
+    <div class="panel-head">
+      <h2>Результат</h2>
+      <div class="actions compact">
+        <button class="secondary" id="copy" disabled>Копировать JSON</button>
+        <button class="secondary" id="download" disabled>Скачать JSON</button>
+      </div>
+    </div>
+    <div id="result" class="empty">Здесь появится черновик карточки товара.</div>
+  </section>
+  <footer>Прототип для подготовки черновиков. Все результаты требуют редакторской проверки.</footer>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
